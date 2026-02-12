@@ -1,0 +1,34 @@
+spreadsheet_id: 1e8fOwMOn-EkmsAAdN4Ybo1YS8RcUAHuXZ5SHns2DHTo
+creds_path: creds/gsheets-service.json
+sheets:
+- SALUD
+- ENERGIA
+- COMMODITIES
+- TECNOLOGÍA
+- FINANCIERO
+top_n_per_sector: 5
+last_n_duplicate_check: 6
+min_atr_distance: 0.1
+require_ema15_above_price: true
+require_price_above_ema150: true
+rsi_2h_max: 60
+min_atr: 0.5
+weights:
+  rsi_low: 12
+  mfi_rsi_soft: 15
+  macd_pos: 5
+  ema15_close_gap: 16
+  atr_score: 16
+  ema150_distance: 10
+  ema50_below: 10
+mfi_rsi_max_diff: 5.0
+enforce_mfi_rsi_hard: true
+data_provider: yfinance
+batch_size: 200
+workers: 8
+cache_ttl_min: 15
+max_download_retries: 3
+indicators_parquet: intermediate/indicators.parquet
+candidates_parquet: intermediate/candidates.parquet
+candidates_csv: intermediate/candidates.csv
+candidates_sheetready_csv: intermediate/candidates.sheet_ready.csv

@@ -1,0 +1,7 @@
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-10-01 16:06:27,846 INFO === RUN PIPELINE START 2025-10-01T14:06:27.846722 UTC ===
+2025-10-01 16:06:27,847 INFO Stage=export attempt 1/2
+2025-10-01 16:06:27,847 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 3_export_sheets.py
+
+PROCESS EXIT CODE: 1

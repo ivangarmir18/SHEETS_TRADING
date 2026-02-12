@@ -1,0 +1,133 @@
+A:\pilim\Downloads\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2026-01-22 16:44:23,104 INFO === RUN PIPELINE START 2026-01-22T15:44:23.104682 UTC ===
+2026-01-22 16:44:23,105 INFO Stage=fetch attempt 1/2
+2026-01-22 16:44:23,105 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+2026-01-22 16:46:34,325 INFO Salida (1_fetch_indicators.py): returncode=0 (t=131.2s)
+2026-01-22 16:46:34,325 WARNING stderr: 2026-01-22 16:44:24,043 INFO Starting fetch for 1147 tickers in batches of 200 (workers=8)
+2026-01-22 16:44:24,060 INFO Batch 1/6: downloading 200 tickers (of 200)
+2026-01-22 16:44:26,102 ERROR HTTP Error 404: 
+2026-01-22 16:44:31,705 ERROR 
+32 Failed downloads:
+2026-01-22 16:44:31,706 ERROR ['CIE', 'BMW', 'AYV', 'CABK', 'BNP', 'ANA', 'ACS', 'COL', 'AF', 'CEZ']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+2026-01-22 16:44:31,706 ERROR ['AIXA', 'CMIN3', 'CERN', 'CAP', 'BP.LS', 'AYDEN', 'ANTM', 'CNC.MI', 'AC', 'BHIA3', 'BAYN', 'CPFE3', 'BBSE3', 'COOP', 'BAS', 'ALO', 'CHK', 'ADS', 'AMNB', 'ALFAA', 'AGUA', 'BC8']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2026-01-22 16:44:33,349 ERROR 
+1 Failed download:
+2026-01-22 16:44:33,349 ERROR ['AC']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+2026-01-22 16:44:33,351 WARNING No data after 1h fallback for AC
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2026-01-22 16:44:33,504 ERROR 
+1 Failed download:
+2026-01-22 16:44:33,504 ERROR ['ACS']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+2026-01-22 16:44:33,505 WARNING No data after 1
+2026-01-22 16:46:34,325 INFO Stage fetch completado correctamente.
+2026-01-22 16:46:34,326 INFO Stage=score attempt 1/2
+2026-01-22 16:46:34,327 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2026-01-22 16:46:34,875 INFO Salida (2_score_select.py): returncode=0 (t=0.5s)
+2026-01-22 16:46:34,875 WARNING stderr: 2026-01-22 16:46:34,759 WARNING Could not read parquet intermediate/indicators.parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-01-22 16:46:34,766 INFO Loaded indicators from csv: intermediate/indicators.csv (rows=1098)
+2026-01-22 16:46:34,777 INFO Hard filters (relaxed): total=1098 passed=182 rejected=916 allowed_failures=1 optional_checks=['ema15_above_price', 'ema50_below_price', 'price_above_ema150', 'distance_ok', 'rsi_ok', 'mfi_ok'] enforce_mfi_hard=True
+2026-01-22 16:46:34,779 INFO Optional failures distribution (fail_count:rows)={0: 47, 1: 222, 2: 243, 3: 443, 4: 121, 5: 20, 6: 2}
+2026-01-22 16:46:34,792 INFO Wrote rejected sample to intermediate\rejected_sample_relaxed.csv
+2026-01-22 16:46:34,804 INFO Scoring computed. Score stats: min=14.15 median=48.65 max=73.32
+2026-01-22 16:46:34,807 INFO Selected top 5 per sector -> 25 rows
+2026-01-22 16:46:34,807 INFO Selected 25 < min_target 40 -> rellenando con top global 15
+2026-01-22 16:46:34,819 INFO Wrote selected csv: intermediate/candidates.csv
+2026-01-22 16:46:34,823 INFO Wrote sheet-ready CSV: intermediate/candidates.sheet_ready.csv
+2026-01-22 16:46:34,823 INFO SUMMARY: total_indicators=1098 passed=182 selected=40 rejected=916
+2026-01-22 16:46:34,824 INFO Sector=COMMODITIES -> PM, MTZ, AU, POWL, PKG, OTIS, SPSC, GD
+2026-01-22 16:46:34,824 INFO Sector=ENERGIA -> DVN, PSX, PNW, CQP, PWR, MPLX, EIX, PSIX
+2026-01-22 16:46:34,824 INFO Sector=FINANCIERO -> MTDR, PSA, SCI, STE, SARO, EXR, VOYA, MSI, UVV, W, SHAK, DG, AIZ, WH
+2026-01-22 16:46:34,824 INFO Sector=SALUD -> REGN, MO, EXEL, BMY, HSY
+2026-01-22 16:46:34,824 INFO Sector=TECNOLOGÍA -> KLAC, VRTS, ACLS, TSM, OMC
+2026-01-22 16:46:34,875 INFO Stage score completado correctamente.
+2026-01-22 16:46:34,875 INFO Stage=export attempt 1/2
+2026-01-22 16:46:34,876 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 3_export_sheets.py
+2026-01-22 16:46:52,439 INFO Salida (3_export_sheets.py): returncode=0 (t=17.6s)
+2026-01-22 16:46:52,440 WARNING stderr: 2026-01-22 16:46:35,766 INFO export_sheets: CONFIG: creds_path=creds/gsheets-service.json spreadsheet_id=1e8fOwMOn-EkmsAAdN4Ybo1YS8RcUAHuXZ5SHns2DHTo candidates=intermediate/candidates.sheet_ready.csv sheets=['SALUD', 'ENERGIA', 'COMMODITIES', 'TECNOLOGÍA', 'FINANCIERO']
+2026-01-22 16:46:35,766 INFO export_sheets: Leyendo candidates desde: intermediate/candidates.sheet_ready.csv
+2026-01-22 16:46:35,771 INFO export_sheets: Usando columna de sector: Sector
+2026-01-22 16:46:35,771 INFO export_sheets: Autenticando gspread con creds/gsheets-service.json
+2026-01-22 16:46:37,670 INFO export_sheets: Spreadsheet abierto: Trades
+2026-01-22 16:46:37,670 INFO export_sheets: Procesando hoja config: 'SALUD'
+2026-01-22 16:46:40,939 INFO export_sheets: Escribiendo bloque en 'SALUD' rango A16:H20 (cols=8) filas=5 (tickers: REGN, MO, EXEL, BMY, HSY)
+A:\pilim\Downloads\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2026-01-22 16:46:41,231 INFO export_sheets: Hoja 'SALUD': escritas 5 filas correctamente (preservando columnas derecha).
+2026-01-22 16:46:41,231 INFO export_sheets: Procesando hoja config: 'ENERGIA'
+2026-01-22 16:46:43,421 INFO export_sheets: Escribiendo bloque en 'ENERGÍA' rango A10:H14 (cols=8) filas=5 (tickers: DVN, PSX, PNW, CQP, PWR)
+A:\pilim\Downloads\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2026-01-22 16:46:44,138 INFO export_sheets: Hoja 'ENERGÍA': escritas 5 filas correctamente (preservando columnas derecha).
+2026-01-22 16:46:44,138 INFO export_sheets: Procesando hoja config: 'COMMODITIES'
+2026-01-22 16:46:47,353 INFO export_sheets: Escribiendo bloque en 'COMMODITIES' rango A15:H19 (cols=8) filas=5 (tickers: PM, MTZ, AU, POWL, PKG)
+A:\pilim\Downloads\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2026-01-22 16:46:47,576 INFO export_sheets: Hoja 'COMMODITIES': escritas 5 filas correctamente (preservando columnas derecha).
+2026-01-22 16:46:47,576 INFO export_sheets: Procesando hoja config: 'TECNOLOGÍA'
+2026-01-22 16:46:49,760 INFO export_sheets: Ticker VRTS omitido en 'TECNOLOGÍA' por duplicado reciente.
+2026-01-22 16:46:50,240 INFO export_sheets: Escribiendo bloque en 'TECNOLOGÍA' rango A17:H20 (cols=8) filas=4 (tickers: KLAC, ACLS, TSM, OMC)
+A:\pilim\Downloads\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2026-01-22 16:46:50,466 INFO export_sheets: Hoja 'TECNOLOGÍA': escritas 4 filas correctamente (preservando columnas derecha).
+2026-01-22 16:46:50,466 INFO export_sheets: Procesando hoja config: 'FINANCIERO'
+2026-01-22 16:46:51,667 INFO export_sheets: Escribiendo bloque en 'FINANCIERO' rango A22:H26 (cols=8) filas=5 (tickers: MTDR, PSA, SCI, STE, SARO)
+A:\pilim\Downloads\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("ap
+2026-01-22 16:46:52,440 INFO Stage export completado correctamente.
+A:\pilim\Downloads\Financiero\run_pipeline.py:146: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow()
+2026-01-22 16:46:52,440 INFO === RUN PIPELINE END 2026-01-22T15:46:52.440906 UTC (duración 149.3 s) ===
+2026-01-22 16:46:52,797 INFO Resumen candidatos: total=40 (preview):
+2026-01-22 16:46:52,808 INFO TICKER     PRECIO    ATR 2H     EMA 15     EMA 50    EMA 150       MFI       RSI  ENTRADA 1  ENTRADA 2  STOP  TARGET 1  TARGET 2  MONTO  G/P  G/P POT%    _Score      Sector  _sc_rsi_low  _sc_mfi_rsi_soft  _sc_macd_pos  _sc_ema15_close_gap  _sc_atr_score  _sc_ema150_distance  _sc_ema50_below  _sc_fib_soft  _sc_mfi_score  _sc_mfi_diff
+    PM 168.550003  2.142043 168.510790 165.797328 160.667153 40.155551 52.478869        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 72.098846 COMMODITIES     1.504226              15.0           0.0            15.414198       0.869389                 10.0             10.0      7.164811       8.860004      3.286218
+   MTZ 240.000000  5.142929 240.167771 233.072902 224.320413 37.644902 55.210378        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 71.122511 COMMODITIES     0.957924              15.0           0.0            14.956104       2.459663                 10.0             10.0      1.945104      11.119588      4.684127
+    AU 101.970001  2.534915 101.829201  97.155814  89.434966 35.662061 56.488920        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 69.460362 COMMODITIES     0.702216              15.0           0.0            14.222586       1.077585                 10.0             10.0      0.000000      12.904146      5.553829
+  POWL 419.350006 14.667014 419.902834 394.095223 365.872446 47.273351 55.889096        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 68.543176 COMMODITIES     0.822181              15.0           0.0            14.793859       7.506810                 10.0             10.0      5.668810       2.453984      2.297532
+   PKG 220.050003  2.310713 219.609884 216.500839 209.936702 35.675310 54.731108        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 64.891308 COMMODITIES     1.053778              15.0           0.0             9.904989       0.958773                 10.0             10.0      0.000000      12.892221      5.081546
+   DVN  37.000000  0.636122  37.043324  36.691442  36.267321 44.913945 51.269296        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 72.683532     ENERGIA     1.746141              15.0           5.0            13.820619       0.071348                 10.0             10.0     10.773214       4.577450      1.694760
+   PSX 140.875000  1.753164 140.367737 138.833657 136.961794 40.086405 53.699097        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 71.984439     ENERGIA     1.260181              15.0           5.0             6.741074       0.663308                 10.0             10.0     10.767590       8.922235      3.630051
+   PNW  92.769997  0.760715  92.876848  91.287725  89.863223 42.421416 55.364339        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 65.030778     ENERGIA     0.927132              15.0           0.0            11.505216       0.137375                 10.0             10.0      7.188882       6.820726      3.451446
+   CQP  56.500000  0.649100  56.436938  55.214509  54.246954 43.795237 57.692556        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 61.001657     ENERGIA     0.461489              15.0           0.0            12.891099       0.078226                 10.0             10.0      3.280605       5.584287      3.705952
+   PWR 461.380005 10.003215 462.771580 448.462502 442.932446 52.458102 54.643963        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 60.264459     ENERGIA     1.071207              15.0           0.0            11.548392       5.035299                 10.0             10.0      7.026664       0.000000      0.582896
+  MTDR  43.356998  0.701071  43.436239  42.854710  42.341752 35.632543 51.603727        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 73.319296  FINANCIERO     1.679255              15.0           0.0            12.383125       0.105767                 10.0             10.0      6.961456      12.930711      4.258982
+   PSA 288.700012  2.941164 287.970594 280.769559 275.374426 36.771122 58.683418        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 67.151574  FINANCIERO     0.263316              15.0           0.0             8.063902       1.292871                 10.0             10.0      4.782216      11.905990      5.843279
+   SCI  81.949997  0.885935  81.897130  80.759436  79.719693 45.152765 53.759066        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 67.021539  FINANCIERO     1.248187              15.0           0.0            14.090450       0.203733                 10.0             10.0      9.821644       4.362511      2.295013
+   STE 262.970001  2.664991 262.867415 261.204493 257.945758 32.537385 51.105754        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 66.395145  FINANCIERO     1.778849               0.0           0.0            14.768188       1.146517                 10.0             10.0      8.033672      15.716353      4.951565
+  SARO  32.130001  0.605357  32.125241  31.428423  29.630559 42.997575 52.599025        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 65.645324  FINANCIERO     1.480195              15.0           0.0            15.748401       0.055045                 10.0             10.0      4.499114       6.302182      2.560386
+  REGN 757.489990  9.871682 744.633698 757.220638 745.620555 35.688186 56.867915        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 70.272496       SALUD     0.626417              15.0           5.0             0.000000       4.965596                 10.0             10.0      6.151923      12.880633      5.647928
+    MO  61.180000  0.548922  61.095942  59.708130  59.010309 39.845306 58.523034        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 60.540211       SALUD     0.295393              15.0           0.0            11.099728       0.025138                 10.0             10.0      0.000000       9.139225      4.980728
+  EXEL  44.790001  0.711600  44.501247  44.408313  43.639764 29.074406 53.711490        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 59.286601       SALUD     1.257702               0.0           5.0             3.014987       0.111347                 10.0             10.0      6.165710      17.166966      6.569889
+   BMY  55.136600  0.629564  54.909070  55.110863  53.138815 36.028601 49.663014        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 57.780257       SALUD     2.067397              15.0           0.0             4.434884       0.067873                 10.0             10.0      0.000000      12.574259      3.635843
+   HSY 195.339996  2.150919 196.912141 193.050560 187.301888 37.201919 48.437406        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 52.701015       SALUD     2.312519              15.0           0.0             0.000000       0.874093                 10.0             10.0      0.000000      11.518273      2.996130
+
+PROCESS EXIT CODE: 0

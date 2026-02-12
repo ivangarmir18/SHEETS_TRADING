@@ -1,0 +1,101 @@
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-10-01 15:48:07,519 INFO === RUN PIPELINE START 2025-10-01T13:48:07.518979 UTC ===
+2025-10-01 15:48:07,519 INFO Stage=fetch attempt 1/2
+2025-10-01 15:48:07,519 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+2025-10-01 15:49:56,183 INFO Salida (1_fetch_indicators.py): returncode=0 (t=108.7s)
+2025-10-01 15:49:56,184 WARNING stderr: 2025-10-01 15:48:09,652 INFO Starting fetch for 1147 tickers in batches of 200 (workers=8)
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2025-10-01 15:49:56,184 INFO Stage fetch completado correctamente.
+2025-10-01 15:49:56,186 INFO Stage=score attempt 1/2
+2025-10-01 15:49:56,186 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2025-10-01 15:49:57,746 INFO Salida (2_score_select.py): returncode=0 (t=1.6s)
+2025-10-01 15:49:57,746 WARNING stderr: 2025-10-01 15:49:57,567 INFO Loaded indicators from parquet: intermediate/indicators.parquet (rows=1098)
+2025-10-01 15:49:57,589 INFO Hard filters applied: passed=17 rejected=1081 (total=1098)
+2025-10-01 15:49:57,598 INFO Wrote rejected sample to intermediate\rejected_sample.csv
+2025-10-01 15:49:57,615 INFO Scoring computed. Score stats: min=23.87 median=33.90 max=58.46
+2025-10-01 15:49:57,619 INFO Selected top 8 per sector. Selected rows=17
+2025-10-01 15:49:57,637 INFO Wrote selected candidates (parquet) to intermediate/candidates.parquet
+2025-10-01 15:49:57,640 INFO Wrote sheet-ready CSV to intermediate/candidates.sheet_ready.csv (columns will match sheet layout)
+2025-10-01 15:49:57,640 INFO SUMMARY: total_indicators=1098 passed=17 selected=17 rejected=1081
+2025-10-01 15:49:57,641 INFO Sector=COMMODITIES -> GATX, AIR, GM
+2025-10-01 15:49:57,642 INFO Sector=ENERGIA -> GE, MPC, PSX
+2025-10-01 15:49:57,642 INFO Sector=FINANCIERO -> LITE, MLI, PSMT, RENT3.SA, STT, BHF
+2025-10-01 15:49:57,642 INFO Sector=SALUD -> ENTG
+2025-10-01 15:49:57,643 INFO Sector=TECNOLOGÍA -> ONTO, WDAY, GDS, SW.PA
+2025-10-01 15:49:57,746 INFO Stage score completado correctamente.
+2025-10-01 15:49:57,747 INFO Stage=export attempt 1/2
+2025-10-01 15:49:57,747 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 3_export_sheets.py
+2025-10-01 15:50:09,882 INFO Salida (3_export_sheets.py): returncode=0 (t=12.1s)
+2025-10-01 15:50:09,882 WARNING stderr: 2025-10-01 15:49:59,704 INFO export_sheets: CONFIG: creds_path=creds/gsheets-service.json spreadsheet_id=1e8fOwMOn-EkmsAAdN4Ybo1YS8RcUAHuXZ5SHns2DHTo candidates=intermediate/candidates.sheet_ready.csv sheets=['FINANCIERO']
+2025-10-01 15:49:59,706 INFO export_sheets: Leyendo candidates desde: intermediate/candidates.sheet_ready.csv
+2025-10-01 15:49:59,731 INFO export_sheets: Usando columna de sector: Sector
+2025-10-01 15:49:59,733 INFO export_sheets: Autenticando gspread con creds/gsheets-service.json
+2025-10-01 15:50:03,203 INFO export_sheets: Spreadsheet abierto: Trades
+2025-10-01 15:50:03,203 INFO export_sheets: Procesando hoja config: 'FINANCIERO'
+2025-10-01 15:50:06,993 INFO export_sheets: Ticker LITE omitido en 'FINANCIERO' por duplicado reciente.
+2025-10-01 15:50:06,993 INFO export_sheets: Ticker MLI omitido en 'FINANCIERO' por duplicado reciente.
+2025-10-01 15:50:06,994 INFO export_sheets: Ticker PSMT omitido en 'FINANCIERO' por duplicado reciente.
+2025-10-01 15:50:09,212 INFO export_sheets: Escribiendo bloque en 'FINANCIERO' rango A8:H10 (cols=8) filas=3 (tickers: RENT3.SA, STT, BHF)
+C:\Users\admin\Downloads\Financiero (3)\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2025-10-01 15:50:09,620 INFO export_sheets: Hoja 'FINANCIERO': escritas 3 filas correctamente (preservando columnas derecha).
+2025-10-01 15:50:09,621 INFO export_sheets: Export finalizado.
+2025-10-01 15:50:09,883 INFO Stage export completado correctamente.
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:146: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow()
+2025-10-01 15:50:09,883 INFO === RUN PIPELINE END 2025-10-01T13:50:09.883417 UTC (duración 122.4 s) ===
+2025-10-01 15:50:11,043 INFO Resumen candidatos: total=17 (preview):
+2025-10-01 15:50:11,055 INFO   TICKER     PRECIO   ATR 2H     EMA 15     EMA 50    EMA 150       MFI       RSI  ENTRADA 1  ENTRADA 2  STOP  TARGET 1  TARGET 2  MONTO  G/P  G/P POT%    _Score      Sector
+    GATX 174.759995 1.374643 175.186901 173.487025 167.985619 73.794951 49.807457        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 36.595747 COMMODITIES
+     AIR  83.644997 1.970714  85.915072  81.238728  77.710857 85.397424 49.323568        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 31.633744 COMMODITIES
+      GM  60.240002 0.691644  60.727888  59.788451  57.982154 57.161646 48.788096        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 29.322053 COMMODITIES
+      GE 296.570007 3.272993 297.168172 294.342825 283.554613 52.941341 49.445663        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 48.394159     ENERGIA
+     MPC 191.854996 2.477486 194.053405 190.061346 182.134100 52.012624 46.903655        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 38.017036     ENERGIA
+     PSX 135.404999 1.706842 136.377158 134.651504 131.368697 53.063117 48.419493        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 36.376533     ENERGIA
+    LITE 161.279999 2.687134 161.400641 160.200030 144.650460 51.882678 49.494875        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 56.550997  FINANCIERO
+     MLI 100.400002 0.869749 100.681308  99.841258  96.314367 73.580339 49.326189        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 33.899939  FINANCIERO
+    PSMT 119.029999 1.499150 120.139291 117.581269 113.582920 88.921437 49.348962        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 33.165768  FINANCIERO
+RENT3.SA  39.779999 0.528572  39.953896  39.520939  37.898203 15.365052 47.966712        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 32.523360  FINANCIERO
+     STT 114.230003 1.190972 115.331898 114.094112 112.901059 68.136386 46.942897        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 30.591219  FINANCIERO
+     BHF  52.889999 0.738972  53.963661  52.442162  49.854709 65.342899 44.377233        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 23.869956  FINANCIERO
+    ENTG  92.419998 1.352309  92.920624  91.869082  87.721400 49.150373 47.521475        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 36.791646       SALUD
+    ONTO 127.700104 2.174085 129.029980 124.965490 115.341411 37.295397 48.550095        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 58.456790  TECNOLOGÍA
+    WDAY 241.029999 2.785592 243.666109 238.881343 233.534055 71.551343 47.199686        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 38.992797  TECNOLOGÍA
+     GDS  39.080002 1.091657  39.815258  39.006866  36.772112 33.154633 46.540388        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 32.726234  TECNOLOGÍA
+   SW.PA  53.450001 0.546428  53.756829  53.432983  52.850264 27.456839 46.793409        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 30.765068  TECNOLOGÍA
+
+PROCESS EXIT CODE: 0

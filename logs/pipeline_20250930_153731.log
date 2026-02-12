@@ -1,0 +1,109 @@
+A:\pilim\Desktop\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-09-30 17:37:31,303 INFO === RUN PIPELINE START 2025-09-30T15:37:31.303596 UTC ===
+2025-09-30 17:37:31,303 INFO Stage=fetch attempt 1/2
+2025-09-30 17:37:31,303 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+2025-09-30 17:38:45,260 INFO Salida (1_fetch_indicators.py): returncode=0 (t=74.0s)
+2025-09-30 17:38:45,260 WARNING stderr: 2025-09-30 17:37:31,959 INFO Starting fetch for 1147 tickers in batches of 200 (workers=8)
+2025-09-30 17:37:31,970 INFO Batch 1/6: downloading 200 tickers (of 200)
+2025-09-30 17:37:34,040 ERROR HTTP Error 404: 
+2025-09-30 17:37:39,088 ERROR 
+32 Failed downloads:
+2025-09-30 17:37:39,088 ERROR ['ANA', 'CABK', 'BNP', 'CIE', 'AF', 'COL', 'BMW', 'AYV', 'ACS', 'CEZ']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+2025-09-30 17:37:39,088 ERROR ['ADS', 'ANTM', 'ALFAA', 'BHIA3', 'CBK', 'AGUA', 'AIXA', 'BAYN', 'ALO', 'CNC.MI', 'AYDEN', 'CAP', 'AMNB', 'BBSE3', 'BAS', 'CERN', 'CHK', 'BC8', 'CMIN3', 'BP.LS', 'CPFE3']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+2025-09-30 17:37:39,088 ERROR ['ARX']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "15m data not available for startTime=1753363800 and endTime=1759246741. The requested range must be within the last 60 days.")')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Desktop\Financiero\1_fetch_indicators.py:301: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2025-09-30 17:37:40,335 ERROR 
+1 Failed download:
+2025-09-30 17:37
+2025-09-30 17:38:45,261 INFO Stage fetch completado correctamente.
+2025-09-30 17:38:45,262 INFO Stage=score attempt 1/2
+2025-09-30 17:38:45,262 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2025-09-30 17:38:45,814 INFO Salida (2_score_select.py): returncode=0 (t=0.6s)
+2025-09-30 17:38:45,814 WARNING stderr: 2025-09-30 17:38:45,715 WARNING Could not read parquet (intermediate/indicators.parquet): Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-09-30 17:38:45,725 INFO Loaded indicators from csv: intermediate/indicators.csv (rows=1098)
+2025-09-30 17:38:45,737 INFO Hard filters applied: passed=36 rejected=1062 (total=1098)
+2025-09-30 17:38:45,744 INFO Wrote rejected sample to intermediate\rejected_sample.csv
+2025-09-30 17:38:45,751 INFO Scoring computed. Score stats: min=17.68 median=40.20 max=75.43
+2025-09-30 17:38:45,753 INFO Selected top 4 per sector. Selected rows=19
+2025-09-30 17:38:45,760 INFO Wrote selected candidates (csv) to intermediate/candidates.csv
+2025-09-30 17:38:45,763 INFO Wrote sheet-ready CSV to intermediate/candidates.sheet_ready.csv (columns will match sheet layout)
+2025-09-30 17:38:45,763 INFO SUMMARY: total_indicators=1098 passed=36 selected=19 rejected=1062
+2025-09-30 17:38:45,763 INFO Sector=COMMODITIES -> TPR, PII, STRL, MKSI
+2025-09-30 17:38:45,763 INFO Sector=ENERGIA -> FSLR, BE, PSX, MPC
+2025-09-30 17:38:45,764 INFO Sector=FINANCIERO -> LITE, RENT3.SA, VOE, JPM
+2025-09-30 17:38:45,764 INFO Sector=SALUD -> UNH, EXAS, ENTG
+2025-09-30 17:38:45,764 INFO Sector=TECNOLOGÍA -> KEYS, SNOW, FLEX, ONTO
+2025-09-30 17:38:45,814 INFO Stage score completado correctamente.
+2025-09-30 17:38:45,814 INFO Stage=export attempt 1/2
+2025-09-30 17:38:45,814 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 3_export_sheets.py
+2025-09-30 17:38:49,861 INFO Salida (3_export_sheets.py): returncode=0 (t=4.0s)
+2025-09-30 17:38:49,861 WARNING stderr: 2025-09-30 17:38:46,552 INFO export_sheets: CONFIG: creds_path=creds/gsheets-service.json spreadsheet_id=1e8fOwMOn-EkmsAAdN4Ybo1YS8RcUAHuXZ5SHns2DHTo candidates=intermediate/candidates.sheet_ready.csv sheets=['FINANCIERO']
+2025-09-30 17:38:46,553 INFO export_sheets: Leyendo candidates desde: intermediate/candidates.sheet_ready.csv
+2025-09-30 17:38:46,557 INFO export_sheets: Usando columna de sector: Sector
+2025-09-30 17:38:46,557 INFO export_sheets: Autenticando gspread con creds/gsheets-service.json
+2025-09-30 17:38:47,761 INFO export_sheets: Spreadsheet abierto: Trades
+2025-09-30 17:38:47,761 INFO export_sheets: Procesando hoja config: 'FINANCIERO'
+2025-09-30 17:38:49,461 INFO export_sheets: Escribiendo bloque en 'FINANCIERO' rango A6:H9 (cols=8) filas=4 (tickers: LITE, RENT3.SA, VOE, JPM)
+A:\pilim\Desktop\Financiero\3_export_sheets.py:355: DeprecationWarning: The order of arguments in worksheet.update() has changed. Please pass values first and range_name secondor used named arguments (range_name=, values=)
+  ws.update(range_to_update, merged_rows, value_input_option=cfg.get("append_value_input_option", "USER_ENTERED"))
+2025-09-30 17:38:49,767 INFO export_sheets: Hoja 'FINANCIERO': escritas 4 filas correctamente (preservando columnas derecha).
+2025-09-30 17:38:49,767 INFO export_sheets: Export finalizado.
+2025-09-30 17:38:49,861 INFO Stage export completado correctamente.
+A:\pilim\Desktop\Financiero\run_pipeline.py:146: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow()
+2025-09-30 17:38:49,862 INFO === RUN PIPELINE END 2025-09-30T15:38:49.861988 UTC (duración 78.6 s) ===
+2025-09-30 17:38:50,207 INFO Resumen candidatos: total=19 (preview):
+2025-09-30 17:38:50,212 INFO   TICKER     PRECIO   ATR 2H     EMA 15     EMA 50    EMA 150       MFI       RSI  ENTRADA 1  ENTRADA 2  STOP  TARGET 1  TARGET 2  MONTO  G/P  G/P POT%    _Score      Sector
+     TPR 110.379997 1.960857 110.626184 110.126822 106.829787 52.026680 48.557459        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 55.578807 COMMODITIES
+     PII  57.557499 1.052029  57.975280  57.514160  56.192054 88.644291 49.377859        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 50.854992 COMMODITIES
+    STRL 341.829987 8.729887 343.786723 336.647870 309.190423 49.515463 48.422496        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 47.453833 COMMODITIES
+    MKSI 122.790001 1.842136 123.110957 121.391571 113.179326 52.526630 48.288731        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 39.909440 COMMODITIES
+    FSLR 218.744995 4.353915 221.461764 215.622971 203.967966 44.774476 48.678727        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 57.163927     ENERGIA
+      BE  72.089996 2.605956  72.259041  71.197111  59.547675 66.861915 48.669225        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 57.072593     ENERGIA
+     PSX 135.071793 1.912322 136.876530 134.562856 131.127610 64.265986 46.844078        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 30.807596     ENERGIA
+     MPC 192.304993 2.558808 194.934174 189.776035 181.676235 55.540607 47.889013        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 30.217549     ENERGIA
+    LITE 160.690002 3.586176 161.254827 160.007061 144.048874 58.301655 48.300930        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 57.193351  FINANCIERO
+RENT3.SA  39.720001 0.560000  40.125598  39.511355  37.885487 36.006236 46.069387        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 52.171652  FINANCIERO
+     VOE 173.199997 0.854834 173.558119 173.146253 171.819726 66.163949 48.420560        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 50.634444  FINANCIERO
+     JPM 311.410004 2.511455 314.417986 311.303300 303.541276 41.704045 43.974450        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 49.207949  FINANCIERO
+     UNH 344.039886 3.751338 345.208284 341.839661 322.961703 38.811673 48.408776        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 60.433315       SALUD
+    EXAS  53.299999 0.721072  53.443950  53.136670  51.338025 40.662002 48.511459        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 58.189056       SALUD
+    ENTG  91.919998 1.486430  93.398843  91.864748  87.431303 38.571650 44.105086        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 50.482292       SALUD
+    KEYS 173.804993 1.568572 173.967113 173.488788 169.703458 43.602593 48.432063        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 75.426364  TECNOLOGÍA
+    SNOW 224.005005 3.503496 224.555694 223.621787 219.236281 57.040678 49.186303        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 56.833178  TECNOLOGÍA
+    FLEX  57.355000 0.881678  57.368367  57.214473  55.224048 57.824148 49.173107        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 55.487872  TECNOLOGÍA
+    ONTO 128.309998 2.307721 129.614964 124.601611 114.669901 33.990756 49.880337        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 35.096221  TECNOLOGÍA
+
+PROCESS EXIT CODE: 0

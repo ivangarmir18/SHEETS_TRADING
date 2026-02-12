@@ -1,0 +1,103 @@
+A:\pilim\Downloads\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2026-01-06 22:52:36,842 INFO === RUN PIPELINE START 2026-01-06T21:52:36.842557 UTC ===
+2026-01-06 22:52:36,842 INFO Stage=fetch attempt 1/2
+2026-01-06 22:52:36,843 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+2026-01-06 22:55:40,927 INFO Salida (1_fetch_indicators.py): returncode=0 (t=184.1s)
+2026-01-06 22:55:40,927 WARNING stderr: 2026-01-06 22:52:44,142 INFO Starting fetch for 1147 tickers in batches of 200 (workers=8)
+2026-01-06 22:52:44,162 INFO Batch 1/6: downloading 200 tickers (of 200)
+2026-01-06 22:52:47,717 ERROR HTTP Error 404: 
+2026-01-06 22:52:53,562 ERROR 
+32 Failed downloads:
+2026-01-06 22:52:53,563 ERROR ['BAS', 'CMIN3', 'AIXA', 'CPFE3', 'BAYN', 'BP.LS', 'CAP', 'AGUA', 'AMNB', 'BBSE3', 'BC8', 'ALFAA', 'BHIA3', 'CNC.MI', 'ALO', 'AYDEN', 'COOP', 'CHK', 'AC', 'ADS', 'ANTM', 'CERN']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+2026-01-06 22:52:53,563 ERROR ['AF', 'CABK', 'CEZ', 'BMW', 'AYV', 'BNP', 'ACS', 'ANA', 'COL', 'CIE']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2026-01-06 22:52:55,195 ERROR 
+1 Failed download:
+2026-01-06 22:52:55,195 ERROR ['AC']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+2026-01-06 22:52:55,197 WARNING No data after 1h fallback for AC
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+A:\pilim\Downloads\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+2026-01-06 22:52:55,354 ERROR 
+1 Failed download:
+2026-01-06 22:52:55,354 ERROR ['ACS']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+2026-01-06 22:52:55,355 WARNING No data after 1
+2026-01-06 22:55:40,928 INFO Stage fetch completado correctamente.
+2026-01-06 22:55:40,928 INFO Stage=score attempt 1/2
+2026-01-06 22:55:40,929 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2026-01-06 22:55:41,437 INFO Salida (2_score_select.py): returncode=1 (t=0.5s)
+2026-01-06 22:55:41,437 WARNING stderr: 2026-01-06 22:55:41,349 WARNING Could not read parquet intermediate/indicators.parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-01-06 22:55:41,357 INFO Loaded indicators from csv: intermediate/indicators.csv (rows=1099)
+2026-01-06 22:55:41,368 INFO Hard filters (relaxed): total=1099 passed=91 rejected=1008 allowed_failures=1 optional_checks=['ema15_above_price', 'ema50_below_price', 'price_above_ema150', 'distance_ok', 'rsi_ok', 'mfi_ok'] enforce_mfi_hard=True
+2026-01-06 22:55:41,370 INFO Optional failures distribution (fail_count:rows)={0: 34, 1: 148, 2: 212, 3: 567, 4: 91, 5: 45, 6: 2}
+2026-01-06 22:55:41,381 INFO Wrote rejected sample to intermediate\rejected_sample_relaxed.csv
+2026-01-06 22:55:41,387 ERROR Error en scoring relajado: 'float' object has no attribute 'clip'
+Traceback (most recent call last):
+  File "A:\pilim\Downloads\Financiero\2_score_select.py", line 477, in main
+    scored = compute_scores(passed, cfg)
+  File "A:\pilim\Downloads\Financiero\2_score_select.py", line 351, in compute_scores
+    score_at_cut = (1.0 - (abs(mfi_cut - mfi_peak) / max(mfi_span, 1e-9))).clip(0.0, 1.0)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'clip'
+2026-01-06 22:55:41,437 WARNING Stage score fallo con code=1
+2026-01-06 22:55:41,437 INFO Reintentando en 5s...
+2026-01-06 22:55:46,437 INFO Stage=score attempt 2/2
+2026-01-06 22:55:46,437 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2026-01-06 22:55:46,925 INFO Salida (2_score_select.py): returncode=1 (t=0.5s)
+2026-01-06 22:55:46,926 WARNING stderr: 2026-01-06 22:55:46,842 WARNING Could not read parquet intermediate/indicators.parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-01-06 22:55:46,850 INFO Loaded indicators from csv: intermediate/indicators.csv (rows=1099)
+2026-01-06 22:55:46,861 INFO Hard filters (relaxed): total=1099 passed=91 rejected=1008 allowed_failures=1 optional_checks=['ema15_above_price', 'ema50_below_price', 'price_above_ema150', 'distance_ok', 'rsi_ok', 'mfi_ok'] enforce_mfi_hard=True
+2026-01-06 22:55:46,861 INFO Optional failures distribution (fail_count:rows)={0: 34, 1: 148, 2: 212, 3: 567, 4: 91, 5: 45, 6: 2}
+2026-01-06 22:55:46,875 INFO Wrote rejected sample to intermediate\rejected_sample_relaxed.csv
+2026-01-06 22:55:46,880 ERROR Error en scoring relajado: 'float' object has no attribute 'clip'
+Traceback (most recent call last):
+  File "A:\pilim\Downloads\Financiero\2_score_select.py", line 477, in main
+    scored = compute_scores(passed, cfg)
+  File "A:\pilim\Downloads\Financiero\2_score_select.py", line 351, in compute_scores
+    score_at_cut = (1.0 - (abs(mfi_cut - mfi_peak) / max(mfi_span, 1e-9))).clip(0.0, 1.0)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'clip'
+2026-01-06 22:55:46,926 WARNING Stage score fallo con code=1
+2026-01-06 22:55:46,926 ERROR Stage=score falló después de 2 intentos.
+2026-01-06 22:55:46,926 ERROR Pipeline abortado: Stage score failed after 2 attempts.
+Traceback (most recent call last):
+  File "A:\pilim\Downloads\Financiero\run_pipeline.py", line 137, in main
+    run_stage("score", retries=args.retries, dry_run=args.dry_run, timeout=args.timeout, continue_on_error=args.continue_on_error)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\pilim\Downloads\Financiero\run_pipeline.py", line 110, in run_stage
+    raise RuntimeError(f"Stage {stage} failed after {retries+1} attempts.")
+RuntimeError: Stage score failed after 2 attempts.
+2026-01-06 22:55:46,929 INFO Revisa run_pipeline.log para más detalles.
+
+PROCESS EXIT CODE: 1

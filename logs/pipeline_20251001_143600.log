@@ -1,0 +1,122 @@
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-10-01 16:36:00,376 INFO === RUN PIPELINE START 2025-10-01T14:36:00.376479 UTC ===
+2025-10-01 16:36:00,377 INFO Stage=fetch attempt 1/2
+2025-10-01 16:36:00,377 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+2025-10-01 16:40:44,518 INFO Salida (1_fetch_indicators.py): returncode=0 (t=284.1s)
+2025-10-01 16:40:44,518 WARNING stderr: 2025-10-01 16:36:02,693 INFO Starting fetch for 1147 tickers in batches of 200 (workers=8)
+2025-10-01 16:36:02,720 INFO Batch 1/6: downloading 200 tickers (of 200)
+2025-10-01 16:36:06,956 ERROR HTTP Error 404: 
+2025-10-01 16:36:24,476 ERROR 
+32 Failed downloads:
+2025-10-01 16:36:24,477 ERROR ['ARX']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "15m data not available for startTime=1753363800 and endTime=1759329365. The requested range must be within the last 60 days.")')
+2025-10-01 16:36:24,477 ERROR ['AYV', 'CEZ', 'CIE', 'COL', 'BNP', 'CABK', 'BMW', 'AF', 'ACS', 'ANA']: YFPricesMissingError('possibly delisted; no price data found  (period=60d)')
+2025-10-01 16:36:24,477 ERROR ['BAS', 'BP.LS', 'AGUA', 'ANTM', 'CERN', 'BAYN', 'AYDEN', 'ALO', 'ALFAA', 'BBSE3', 'BC8', 'BHIA3', 'ADS', 'CNC.MI', 'CMIN3', 'AIXA', 'CPFE3', 'CAP', 'CBK', 'AMNB', 'CHK']: YFPricesMissingError('possibly delisted; no price data found  (period=60d) (Yahoo error = "No data found, symbol may be delisted")')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').agg(agg).dropna(how='any')
+C:\Users\admin\Downloads\Financiero (3)\Financiero\1_fetch_indicators.py:394: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+  df2h = df.resample('2H').a
+2025-10-01 16:40:44,519 INFO Stage fetch completado correctamente.
+2025-10-01 16:40:44,520 INFO Stage=score attempt 1/2
+2025-10-01 16:40:44,520 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2025-10-01 16:40:46,355 INFO Salida (2_score_select.py): returncode=1 (t=1.8s)
+2025-10-01 16:40:46,356 WARNING stderr: 2025-10-01 16:40:46,033 INFO Loaded indicators from parquet: intermediate/indicators.parquet (rows=1098)
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 430, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 381, in main
+    passed, rejected = apply_hard_filters(df, cfg)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 201, in apply_hard_filters
+    dist_macro = (df['LastClose'] - df[col]) / df['ATR_2H']
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+    return method(self, other)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 210, in __truediv__
+    return self._arith_method(other, operator.truediv)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\series.py", line 6146, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\base.py", line 1391, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+    res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+    result = func(left, right)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\computation\expressions.py", line 242, in evaluate
+    return _evaluate(op, op_str, a, b)  # type: ignore[misc]
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\computation\expressions.py", line 73, in _evaluate_standard
+    return op(a, b)
+ZeroDivisionError: float division by zero
+2025-10-01 16:40:46,356 WARNING Stage score fallo con code=1
+2025-10-01 16:40:46,356 INFO Reintentando en 5s...
+2025-10-01 16:40:51,357 INFO Stage=score attempt 2/2
+2025-10-01 16:40:51,358 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2025-10-01 16:40:53,016 INFO Salida (2_score_select.py): returncode=1 (t=1.7s)
+2025-10-01 16:40:53,016 WARNING stderr: 2025-10-01 16:40:52,881 INFO Loaded indicators from parquet: intermediate/indicators.parquet (rows=1098)
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 430, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 381, in main
+    passed, rejected = apply_hard_filters(df, cfg)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\2_score_select.py", line 201, in apply_hard_filters
+    dist_macro = (df['LastClose'] - df[col]) / df['ATR_2H']
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+    return method(self, other)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 210, in __truediv__
+    return self._arith_method(other, operator.truediv)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\series.py", line 6146, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\base.py", line 1391, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+    res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+    result = func(left, right)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\computation\expressions.py", line 242, in evaluate
+    return _evaluate(op, op_str, a, b)  # type: ignore[misc]
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\computation\expressions.py", line 73, in _evaluate_standard
+    return op(a, b)
+ZeroDivisionError: float division by zero
+2025-10-01 16:40:53,016 WARNING Stage score fallo con code=1
+2025-10-01 16:40:53,016 ERROR Stage=score falló después de 2 intentos.
+2025-10-01 16:40:53,017 ERROR Pipeline abortado: Stage score failed after 2 attempts.
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py", line 137, in main
+    run_stage("score", retries=args.retries, dry_run=args.dry_run, timeout=args.timeout, continue_on_error=args.continue_on_error)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py", line 110, in run_stage
+    raise RuntimeError(f"Stage {stage} failed after {retries+1} attempts.")
+RuntimeError: Stage score failed after 2 attempts.
+2025-10-01 16:40:53,027 INFO Revisa run_pipeline.log para más detalles.
+
+PROCESS EXIT CODE: 1

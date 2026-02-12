@@ -1,0 +1,7 @@
+A:\pilim\Downloads\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-10-02 21:37:12,328 INFO === RUN PIPELINE START 2025-10-02T19:37:12.328585 UTC ===
+2025-10-02 21:37:12,328 INFO Stage=fetch attempt 1/2
+2025-10-02 21:37:12,329 INFO Ejecutando: 'C:\Users\pilim\AppData\Local\Programs\Python\Python313\python.exe' 1_fetch_indicators.py
+
+PROCESS EXIT CODE: 1

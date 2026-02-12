@@ -1,0 +1,41 @@
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:130: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow()
+2025-10-01 16:06:38,677 INFO === RUN PIPELINE START 2025-10-01T14:06:38.677482 UTC ===
+2025-10-01 16:06:38,678 INFO Stage=score attempt 1/2
+2025-10-01 16:06:38,678 INFO Ejecutando: 'C:\Users\admin\AppData\Local\Programs\Python\Python313\python.exe' 2_score_select.py
+2025-10-01 16:06:40,418 INFO Salida (2_score_select.py): returncode=0 (t=1.7s)
+2025-10-01 16:06:40,418 WARNING stderr: 2025-10-01 16:06:40,208 INFO Loaded indicators from parquet: intermediate/indicators.parquet (rows=1098)
+2025-10-01 16:06:40,236 INFO Hard filters applied: passed=14 rejected=1084 (total=1098)
+2025-10-01 16:06:40,247 INFO Wrote rejected sample to intermediate\rejected_sample.csv
+2025-10-01 16:06:40,266 INFO Scoring computed. Score stats: min=17.26 median=29.62 max=51.89
+2025-10-01 16:06:40,271 INFO Selected top 4 per sector. Selected rows=14
+2025-10-01 16:06:40,293 INFO Wrote selected candidates (parquet) to intermediate/candidates.parquet
+2025-10-01 16:06:40,295 INFO Wrote sheet-ready CSV to intermediate/candidates.sheet_ready.csv (columns will match sheet layout)
+2025-10-01 16:06:40,296 INFO SUMMARY: total_indicators=1098 passed=14 selected=14 rejected=1084
+2025-10-01 16:06:40,297 INFO Sector=COMMODITIES -> ACM, GATX, AIR
+2025-10-01 16:06:40,297 INFO Sector=ENERGIA -> MUR, PSX, MPC
+2025-10-01 16:06:40,298 INFO Sector=FINANCIERO -> RENT3.SA, MLI, PSMT, BHF
+2025-10-01 16:06:40,298 INFO Sector=SALUD -> AAP
+2025-10-01 16:06:40,298 INFO Sector=TECNOLOGÍA -> WIX, IDCC, WDAY
+2025-10-01 16:06:40,418 INFO Stage score completado correctamente.
+C:\Users\admin\Downloads\Financiero (3)\Financiero\run_pipeline.py:146: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow()
+2025-10-01 16:06:40,419 INFO === RUN PIPELINE END 2025-10-01T14:06:40.419125 UTC (duración 1.7 s) ===
+2025-10-01 16:06:41,565 INFO Resumen candidatos: total=14 (preview):
+2025-10-01 16:06:41,576 INFO   TICKER     PRECIO   ATR 2H     EMA 15     EMA 50    EMA 150       MFI       RSI  ENTRADA 1  ENTRADA 2  STOP  TARGET 1  TARGET 2  MONTO  G/P  G/P POT%    _Score      Sector
+     ACM 129.720001 0.985727 129.899334 129.298122 125.649966 70.973552 49.168939        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 51.892574 COMMODITIES
+    GATX 174.490005 1.383571 175.099789 173.526358 168.071770 71.766860 48.496321        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 31.661205 COMMODITIES
+     AIR  83.071098 2.035714  85.843335  81.216222  77.703255 77.787233 47.483632        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 19.682994 COMMODITIES
+     MUR  28.512699 0.623214  28.753796  27.973899  26.362554 39.171532 49.262502        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 50.796415     ENERGIA
+     PSX 135.539993 1.706842 136.394032 134.656798 131.370485 52.715608 48.860876        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 30.903621     ENERGIA
+     MPC 191.279999 2.506772 193.981531 190.038797 182.126484 51.770719 45.540929        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 21.493528     ENERGIA
+RENT3.SA  39.669998 0.528572  39.940146  39.516625  37.896746 15.825329 46.308426        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 28.330195  FINANCIERO
+     MLI 100.169998 0.869749 100.652557  99.832238  96.311321 73.422890 47.660671        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 27.720372  FINANCIERO
+    PSMT 118.665001 1.499150 120.093667 117.566955 113.578086 88.188076 47.519623        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 19.449153  FINANCIERO
+     BHF  52.880001 0.742415  53.962412  52.441770  49.854577 64.720577 44.319611        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 17.261460  FINANCIERO
+     AAP  60.900002 1.009462  61.202556  60.856862  60.032171 87.374630 49.101115        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 49.030050       SALUD
+     WIX 176.830002 3.676994 177.092723 174.830468 161.275254 65.822375 49.090061        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 46.692501  TECNOLOGÍA
+    IDCC 341.799988 4.365411 345.093737 335.800316 304.739168 76.243103 48.044333        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 31.723933  TECNOLOGÍA
+    WDAY 240.990005 2.785592 243.661110 238.879775 233.533525 70.919054 47.096868        NaN        NaN   NaN       NaN       NaN    NaN  NaN       NaN 22.780936  TECNOLOGÍA
+
+PROCESS EXIT CODE: 0
