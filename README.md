@@ -2,7 +2,7 @@
 
 ## 📌 Descripción General
 
-**SHEETS TRADING** es un pipeline ETL (Extract, Transform, Load) desarrollado en Python. Actúa como el motor de un Sistema de Soporte a la Decisión (DSS) diseñado para automatizar el análisis cuantitativo y la gestión de riesgos en operativas de swing trading rápido (1-3 días).
+**SHEETS TRADING** es un pipeline ETL (Extract, Transform, Load) desarrollado en Python. Actúa como el motor de un Sistema de Soporte a la Decisión (DSS) diseñado para automatizar el análisis cuantitativo y la gestión de riesgos en operativas de swing trading, ya sea rápido o lento, ya que el sistema es modular y podemos cambiar el marco horario (Yo mismo cambié de 2H a 12H de velas en un momento dado).
 
 El objetivo del proyecto es eliminar el trabajo manual de recolección de datos y cálculo de métricas (como ATR, EMAs, RSI y proyecciones de riesgo), alimentando de forma totalmente automatizada un panel de control en Google Sheets. Esto permite calcular al instante bloques de entradas escalonadas, stops dinámicos y targets precisos para plataformas de ejecución.
 
@@ -58,5 +58,5 @@ Para auditar o ejecutar este código localmente, se requiere configuración de c
 5. Ejecutar el orquestador:
 python run_pipeline.py --mode full
 (O alternativamente, usar el lanzador visual python gui_launcher.py)
-
-Desarrollado por Iván García Miranda.
+---
+*Desarrollado por Iván García Miranda.*
