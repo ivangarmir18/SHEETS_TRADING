@@ -1,71 +1,62 @@
-# Quant-Swing: Sistema de Soporte a la Decisión (DSS)
+# SHEETS TRADING: Swing Trading ETL & DSS Pipeline
 
-## Descripción General
+## 📌 Descripción General
 
-**Quant-Swing** es un pipeline de ingeniería de datos diseñado para automatizar el análisis técnico y la gestión de riesgos en Swing Trading. El sistema actúa como un **Analista Cuantitativo Automatizado**, procesando cientos de activos (optimizados para QuantFury) para encontrar configuraciones de alta probabilidad.
+**SHEETS TRADING** es un pipeline ETL (Extract, Transform, Load) desarrollado en Python. Actúa como el motor de un Sistema de Soporte a la Decisión (DSS) diseñado para automatizar el análisis cuantitativo y la gestión de riesgos en operativas de swing trading rápido (1-3 días).
 
-El objetivo es eliminar la subjetividad emocional: el sistema calcula puntos de entrada, stops y objetivos basándose estrictamente en la volatilidad (ATR) y la tendencia matemática.
+El objetivo del proyecto es eliminar el trabajo manual de recolección de datos y cálculo de métricas (como ATR, EMAs, RSI y proyecciones de riesgo), alimentando de forma totalmente automatizada un panel de control en Google Sheets. Esto permite calcular al instante bloques de entradas escalonadas, stops dinámicos y targets precisos para plataformas de ejecución.
 
-## Arquitectura del Proyecto
+> **🤖 Nota sobre el desarrollo asistido por IA:** > La arquitectura del pipeline, la lógica de negocio, la separación de responsabilidades (ETL) y el diseño de la automatización son de mi autoría. Para la redacción de la sintaxis pura y la optimización algorítmica del código en Python, me he apoyado intensivamente en Inteligencia Artificial. Mi enfoque en este proyecto es de arquitecto, definiendo el problema, estructurando los módulos y auditando la lógica, delegando el "picado de código" a la IA para maximizar la eficiencia.
 
-El sistema utiliza una arquitectura modular de "Separación de Responsabilidades":
+## ⚙️ Arquitectura del Sistema (ETL Pipeline)
 
-* **Orquestador:** `run_pipeline.py` - Gestiona el flujo de ejecución.
-* **Launcher:** `build_and_make_exe.bat` - Script de "Un Clic" que instala dependencias y ejecuta el programa.
-* **Ingesta:** `1_fetch_indicators.py` - Descarga datos masivos y calcula indicadores (Macro EMAs, ATR, RSI).
-* **Lógica:** `2_score_select.py` - Aplica el modelo de puntuación y filtra los mejores candidatos.
-* **Exportación:** `3_export_sheets.py` - Conecta con la API de Google Sheets para subir los resultados.
-* **Configuración:** `config.yaml` - Control central de parámetros de riesgo y listas de seguimiento.
+El sistema está diseñado bajo una arquitectura modular, optimizada para el procesamiento concurrente y la eficiencia de red.
 
-## Requisitos Previos
+### 1. Extract (`1_fetch_indicators.py`)
+* **Ingesta masiva:** Utiliza la API de `yfinance` para descargar datos intradiarios de cientos de activos financieros clasificados por sectores.
+* **Optimización de rendimiento:** Implementa `ProcessPoolExecutor` para paralelizar las peticiones HTTP y los cálculos matemáticos.
+* **Sistema de Caché:** Integra un mecanismo de caché local (TTL configurable) para evitar peticiones redundantes y bloqueos de la API externa.
 
-1.  Python 3.8 o superior.
-2.  Una cuenta de Google Cloud Platform (para la API de Sheets).
-3.  Una Hoja de Cálculo de Google creada con las pestañas correspondientes (TECNOLOGÍA, SALUD, ENERGÍA, etc.).
+### 2. Transform (`2_score_select.py`)
+* **Procesamiento vectorial:** Uso intensivo de `pandas` y `numpy` para el cálculo de indicadores técnicos complejos (Macro EMAs, Volatilidad ATR, Divergencias RSI/MFI).
+* **Filtros de Negocio:** Aplica un sistema de *scoring* dinámico basado en algoritmos de reversión a la media. Filtra los activos evaluando distancias respecto a medias móviles y umbrales de agotamiento de volumen.
 
-## Instalación y Configuración
+### 3. Load (`3_export_sheets.py`)
+* **Integración Cloud:** Conexión autenticada mediante Google Cloud Platform (Service Accounts) a la API de Google Sheets (`gspread`).
+* **Actualización en Bloque:** Los datos filtrados y puntuados se estructuran y se envían mediante operaciones *batch* (en bloque) a las pestañas correspondientes del Excel, minimizando las cuotas de uso de la API y garantizando la persistencia de datos históricos.
 
-### 1. Configuración de Seguridad (Google Cloud)
-El sistema necesita permiso para escribir en tu Excel.
-1.  Obtén el archivo JSON de credenciales de una **Service Account** en Google Cloud.
-2.  Crea una carpeta llamada `creds` en la raíz del proyecto.
-3.  Renombra tu archivo a `gsheets-service.json` y mételo en esa carpeta.
-4.  **Importante:** Comparte tu Google Sheet con el email de la Service Account (dándole permisos de Editor).
+### Orquestación y Control
+* **`run_pipeline.py` & `gui_launcher.py`:** Scripts orquestadores (CLI y GUI) que gestionan el flujo de ejecución, el manejo de excepciones, los reintentos automáticos y el registro de eventos (*logging*).
+* **`config.yaml`:** Archivo centralizado para la configuración de parámetros de riesgo, ponderación de algoritmos y listas de activos.
 
-### 2. Configuración de Parámetros
-Edita el archivo `config.yaml`:
-* **spreadsheet_id:** Pega aquí el ID largo que aparece en la URL de tu Google Sheet.
-* **sheets:** Asegúrate de que los nombres de la lista coinciden exactamente con las pestañas de tu Excel.
+## 🛠️ Stack Tecnológico
+* **Lenguaje:** Python 3.8+
+* **Procesamiento de Datos:** Pandas, Numpy
+* **Concurrencia:** `concurrent.futures` (Multiprocessing)
+* **Integración API:** Google Cloud API, `gspread`, `yfinance`
+* **Formatos de datos:** Parquet (almacenamiento intermedio de alta velocidad), CSV, YAML.
 
-## Cómo Usar (Modo Automático)
+## 📊 Lógica de Negocio (El "Edge" Estadístico)
 
-No es necesario usar la terminal ni instalar librerías manualmente.
+El modelo matemático detrás del pipeline busca automatizar la detección de configuraciones de alta probabilidad basándose estrictamente en la volatilidad:
+* **Filtro de Tendencia Macro:** Precio > EMA 150 en temporalidades de 12H.
+* **Gestión de Riesgo por Volatilidad (ATR):** Cálculo automatizado de la distancia del ATR para definir rangos de entrada precisos y Stops Loss dinámicos, aislando el ruido del mercado.
+* **Scoring por Divergencias:** Asignación de pesos matemáticos a activos que muestran discrepancias entre el flujo de capital (MFI) y la fuerza relativa (RSI).
 
-1.  Haz doble clic en el archivo **`build_and_make_exe.bat`**.
-2.  El script verificará tu entorno, instalará las librerías necesarias (`pandas`, `yfinance`, `gspread`) y lanzará el análisis.
-3.  Al finalizar, revisa tu Google Sheet. Los nuevos candidatos aparecerán al final de cada lista sin borrar tus operaciones anteriores.
+## 🚀 Instalación y Despliegue Local
 
-## Lógica del "Edge" (Ventaja Estadística)
+Para auditar o ejecutar este código localmente, se requiere configuración de credenciales Cloud:
 
-El sistema busca operaciones de **Reversión a la Media en Tendencia**:
+1. Clonar el repositorio e instalar dependencias necesarias ya integradas en el propio build_and_make_exe.bat (Asegúrate de tener instalados pandas, numpy, yfinance, gspread, pyyaml).
 
-1.  **Filtro de Tendencia:** Precio > EMA 150 (Temporalidad 2H).
-2.  **Gestión de Riesgo (ATR):**
-    * Entrada 1: Precio actual (o límite calculado).
-    * Entrada 2: Entrada 1 - (1.0 x ATR).
-    * Stop Loss: Calculado dinámicamente a 2x ATR para evitar ruido de mercado.
-3.  **Scoring:** Se priorizan activos con divergencias en MFI (Money Flow Index) y RSI, indicando agotamiento de ventas en una tendencia alcista.
+2. Crear un proyecto en Google Cloud Console, habilitar la Google Sheets API y generar una clave de cuenta de servicio (Service Account).
 
-## Estructura de Carpetas
+3. Guardar el archivo JSON generado en creds/gsheets-service.json.
 
-/raiz-del-proyecto
-│
-├── build_and_make_exe.bat  # EJECUTABLE PRINCIPAL
-├── config.yaml             # Configuración de usuario
-├── creds/                  # Carpeta de seguridad (Crear manualmente)
-├── intermediate/           # Datos temporales (Parquet/CSV)
-├── scripts .py             # Código fuente del sistema
-└── README.md               # Este archivo
+4. Ajustar los parámetros de ponderación y el spreadsheet_id en config.yaml.
 
----
-Desarrollado por Iván García Miranda
+5. Ejecutar el orquestador:
+python run_pipeline.py --mode full
+(O alternativamente, usar el lanzador visual python gui_launcher.py)
+
+Desarrollado por Iván García Miranda.
